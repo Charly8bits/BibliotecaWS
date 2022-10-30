@@ -16,6 +16,8 @@ import org.hibernate.Transaction;
  * @author elcha
  */
 public class Vista2Dao {
+    
+    //Consulta de la tabla Vista2
         public List<Vista2> listarVista2() {
         List<Vista2> lista = null;
         Session sesion = HibernateUtil.getSessionFactory().openSession();

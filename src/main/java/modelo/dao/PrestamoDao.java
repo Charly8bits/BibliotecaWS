@@ -16,6 +16,8 @@ import org.hibernate.Transaction;
  * @author elcha
  */
 public class PrestamoDao {
+    
+    //Consulta de la tabla Prestamo
         public List<Prestamo> listarPrestamo() {
         List<Prestamo> lista = null;
         Session sesion = HibernateUtil.getSessionFactory().openSession();
@@ -31,6 +33,7 @@ public class PrestamoDao {
         return lista;
     }
 
+        //Funcion para agregar Prestamo
     public void agregar(Prestamo prestamo) {
         Session sesion = null;
         try {
@@ -48,6 +51,7 @@ public class PrestamoDao {
         }
     }
 
+    //Funcion para modificar
     public void modificar(Prestamo prestamo) {
         Session sesion = null;
         try {
@@ -65,6 +69,7 @@ public class PrestamoDao {
         }
     }
 
+    //Funcion para eliminar prestamo
     public void eliminar(Prestamo prestamo) {
         Session sesion = null;
         try {

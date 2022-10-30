@@ -16,6 +16,8 @@ import org.hibernate.Transaction;
  * @author elcha
  */
 public class TipoLibroDao {
+    
+    //Consulta de la tabla TipoLibro
         public List<TipoLibro> listarTipoLibro() {
         List<TipoLibro> lista = null;
         Session sesion = HibernateUtil.getSessionFactory().openSession();
@@ -31,6 +33,7 @@ public class TipoLibroDao {
         return lista;
     }
 
+        //Funcion para agregar un TipoLibro
     public void agregar(TipoLibro tipolibro) {
         Session sesion = null;
         try {
@@ -48,6 +51,7 @@ public class TipoLibroDao {
         }
     }
 
+    //Funcion para modificar un TipoLibro
     public void modificar(TipoLibro tipolibro) {
         Session sesion = null;
         try {
@@ -65,6 +69,7 @@ public class TipoLibroDao {
         }
     }
 
+    //Funcion para eliminar TipoLibro
     public void eliminar(TipoLibro tipolibro) {
         Session sesion = null;
         try {

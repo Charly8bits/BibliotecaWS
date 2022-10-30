@@ -28,14 +28,14 @@ import modelo.entidad.Prestamo;
 @ViewScoped
 public class PrestamoControl {
 
-    /**
-     * Creates a new instance of PrestamoControl
-     */
+    //Variables
     private List<Prestamo> listaPrestamos;
     private Prestamo prestamo;
+    //SelectItem 
     public List<SelectItem> selectlibro;
     public List<SelectItem> selectestudiante;
 
+    // Select item que llama a clase Libro y LibroDao para mostrar informacion de esa tabla
         public List<SelectItem> getSelectLibro() {
         this.selectlibro = new ArrayList<SelectItem>();
         LibroDao cated = new LibroDao();
@@ -49,7 +49,7 @@ public class PrestamoControl {
         return selectlibro;
     }
         
-       
+       // Select item que llama a clase Estudiante y EstudianteDao para mostrar informacion de esa tabla
                public List<SelectItem> getSelectEstudiante() {
         this.selectestudiante = new ArrayList<SelectItem>();
         EstudianteDao cated = new EstudianteDao();
@@ -64,11 +64,12 @@ public class PrestamoControl {
         return selectestudiante;
     }
     
-    
+    //Constructor
     public PrestamoControl() {
         prestamo = new Prestamo();
     }
 
+    //Crea una lista con la clase PrestamoDao
     public List<Prestamo> getListaPrestamos() {
         PrestamoDao ad = new PrestamoDao();
         listaPrestamos = ad.listarPrestamo();
@@ -87,21 +88,25 @@ public class PrestamoControl {
         this.prestamo = prestamo;
     }
 
+    //Limpiar prestamo
     public void limpiarPrestamo() {
         prestamo = new Prestamo();
     }
 
+    //Agregar prestamo
     public void agregarPrestamo() {
         PrestamoDao ad = new PrestamoDao();
         ad.agregar(prestamo);      
     }
 
+    //Modificar prestamo
     public void modificarPrestamo() {
         PrestamoDao ad = new PrestamoDao();
         ad.modificar(prestamo);
         limpiarPrestamo();
     }
 
+    //Eliminar prestamo
     public void eliminarPrestamo() {
         PrestamoDao ad = new PrestamoDao();
         ad.eliminar(prestamo);

@@ -15,7 +15,11 @@ import org.hibernate.Transaction;
  *
  * @author elcha
  */
+
+
 public class AutorDao {
+    
+    //Consulta de la tabla autor
         public List<Autor> listarAutor() {
         List<Autor> lista = null;
         Session sesion = HibernateUtil.getSessionFactory().openSession();
@@ -31,6 +35,7 @@ public class AutorDao {
         return lista;
     }
 
+        //Funcion para agregar un nuevo autor
     public void agregar(Autor autor) {
         Session sesion = null;
         try {
@@ -48,6 +53,7 @@ public class AutorDao {
         }
     }
 
+    //Funcion para modificar un autor
     public void modificar(Autor autor) {
         Session sesion = null;
         try {
@@ -65,6 +71,7 @@ public class AutorDao {
         }
     }
 
+    //Funcion para eliminar autor
     public void eliminar(Autor autor) {
         Session sesion = null;
         try {

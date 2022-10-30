@@ -15,7 +15,7 @@
     </style>
     
  <h:body>
-<!-- Esto esta es la Barra de Navegacion del Sitio Web -->
+<!-- Barra de Navegacion del Sitio Web -->
 <h:form id="Menu">
     <p:tabMenu activeIndex="2">
         <p:menuitem value="Inicio" outcome="/Menu/Menu" icon="pi pi-fw pi-home">
@@ -39,7 +39,7 @@
     </p:tabMenu>
 </h:form>
 <!-- Fin de la de la Barra de Navegacion del Sitio Web -->  
-<p><!--Esto sirve para generar un espacion entre Fieldsets --></p>
+<p><!--espacion entre Fieldsets --></p>
 <!-- Vista de Autores Disponibles -->
 <p:fieldset id="flsDatosEstudiante" legend="Lista de Datos de Estudiantes">
 <!-- Este es el Boton de Opciones -->
@@ -49,7 +49,7 @@
         <p:menuitem value="Agregar Estudiante" actionListener="#{estudianteControl.limpiarEstudiante()}" oncomplete="PF('dialogoAgregar').show();" update=":formAgregarEstudiante" icon="pi pi-user-plus"/>
     </p:menuButton>
 </h:form>
-<!-- Aca termina el Boton de Menu de Inicio -->
+<!-- Boton de Menu de Inicio -->
 <!-- Inicio de vista de Estudiantes -->
          <h:form id="formListadoEstudiante">
              <p:dataTable id="tablaEstudiante" paginator="true" paginatorPosition="bottom" rows="10" var="Estudiante" value="#{estudianteControl.listaEstudiantes}" emptyMessage="No existen Estudiantes" scrollable="true" scrollHeight="250">

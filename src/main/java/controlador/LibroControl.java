@@ -30,16 +30,15 @@ import modelo.entidad.TipoLibro;
 @ViewScoped
 public class LibroControl {
 
-    /**
-     * Creates a new instance of LibroControl
-     */
+    //Variables
     private List<Libro> listaLibros;
     private Libro libro;
-       public List<SelectItem> selectautor;
+    //SelectItem 
+    public List<SelectItem> selectautor;
     public List<SelectItem> selectTlibro;
 
-         
-               public List<SelectItem> getSelectTlibro() {
+        // Select item que llama a clase tipoLibro y tipoLibroDao para mostrar informacion de esa tabla
+        public List<SelectItem> getSelectTlibro() {
         this.selectTlibro = new ArrayList<>();
         TipoLibroDao cated = new TipoLibroDao();
         List<TipoLibro> ls = cated.listarTipoLibro();
@@ -52,6 +51,7 @@ public class LibroControl {
         return selectTlibro;
     }  
     
+        // Select item que llama a clase Autor y AutorDao para mostrar informacion de esa tabla
         public List<SelectItem> getSelectAutor() {
         this.selectautor = new ArrayList<>();
         AutorDao cated = new AutorDao();
@@ -66,11 +66,12 @@ public class LibroControl {
     }
         
 
-
+        //Constructor
     public LibroControl() {
         libro = new Libro();
     }
 
+    //Crea una lista con la clase LibroDao
     public List<Libro> getListaLibros() {
         LibroDao ad = new LibroDao();
         listaLibros = ad.listarLibro();
@@ -89,21 +90,25 @@ public class LibroControl {
         this.libro = libro;
     }
 
+    //Limipar libro
     public void limpiarLibro() {
         libro = new Libro();
     }
 
+    //Agregar libro
     public void agregarLibro() {
         LibroDao ad = new LibroDao();
         ad.agregar(libro);      
     }
 
+    //Modificar libro
     public void modificarLibro() {
         LibroDao ad = new LibroDao();
         ad.modificar(libro);
         limpiarLibro();
     }
-
+    
+    //Elimnar libro
     public void eliminarLibro() {
         LibroDao ad = new LibroDao();
         ad.eliminar(libro);

@@ -16,6 +16,8 @@ import org.hibernate.Transaction;
  * @author elcha
  */
 public class LibroDao {
+    
+    //Consulta de la tabla libro
         public List<Libro> listarLibro() {
         List<Libro> lista = null;
         Session sesion = HibernateUtil.getSessionFactory().openSession();
@@ -31,6 +33,7 @@ public class LibroDao {
         return lista;
     }
 
+        //Funcion para agregar libro
     public void agregar(Libro libro) {
         Session sesion = null;
         try {
@@ -48,6 +51,7 @@ public class LibroDao {
         }
     }
 
+    //Funcion para modificar libro
     public void modificar(Libro libro) {
         Session sesion = null;
         try {
@@ -65,6 +69,7 @@ public class LibroDao {
         }
     }
 
+    //Funcion para eliminar libro
     public void eliminar(Libro libro) {
         Session sesion = null;
         try {

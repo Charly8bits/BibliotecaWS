@@ -16,22 +16,23 @@ import modelo.entidad.Autor;
 
 /**
  *
- * @author elcon
+ * @author umg
  */
+
 @ManagedBean
 @ViewScoped
 public class AutorControl {
 
-    /**
-     * Creates a new instance of AutorControl
-     */
+    // Variables
     private List<Autor> listaAutors;
     private Autor persona;
-
+    
+    // Construtor
     public AutorControl() {
         persona = new Autor();
     }
-
+    
+    //Crea una lista con clase AutorDao
     public List<Autor> getListaAutors() {
         AutorDao ad = new AutorDao();
         listaAutors = ad.listarAutor();
@@ -50,21 +51,25 @@ public class AutorControl {
         this.persona = persona;
     }
 
+   //Limpiar autor
     public void limpiarAutor() {
         persona = new Autor();
     }
-
+    
+    //Agregar autor
     public void agregarAutor() {
         AutorDao ad = new AutorDao();
         ad.agregar(persona);      
     }
 
+    //Modificar autor
     public void modificarAutor() {
         AutorDao ad = new AutorDao();
         ad.modificar(persona);
         limpiarAutor();
     }
 
+    //Eliminar autor
     public void eliminarAutor() {
         AutorDao ad = new AutorDao();
         ad.eliminar(persona);

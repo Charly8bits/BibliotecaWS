@@ -14,17 +14,19 @@ import org.hibernate.SessionFactory;
  *
  * @author elcha
  */
+
+//Clase que nos otogan sesiones
 public class HibernateUtil {
 
     private static final SessionFactory sessionFactory;
     
     static {
         try {
-            // Create the SessionFactory from standard (hibernate.cfg.xml) 
-            // config file.
+            // Crear SessionFactory a partir del estándar (hibernate.cfg.xml)
+             // archivo de configuración.
             sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
         } catch (Throwable ex) {
-            // Log the exception. 
+            // Registrar la excepción
             System.err.println("Initial SessionFactory creation failed." + ex);
             throw new ExceptionInInitializerError(ex);
         }

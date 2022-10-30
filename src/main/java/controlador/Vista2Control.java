@@ -22,16 +22,16 @@ import modelo.entidad.Vista2;
 @ViewScoped
 public class Vista2Control {
 
-    /**
-     * Creates a new instance of Vista2Control
-     */
+    //Variables
     private List<Vista2> listaVista2s;
     private Vista2 vista2;
 
+    //Constructor
     public Vista2Control() {
         vista2 = new Vista2();
     }
 
+    //Crea una lista con la clase Vista2Dao
     public List<Vista2> getListaVista2s() {
         Vista2Dao ad = new Vista2Dao();
         listaVista2s = ad.listarVista2();
@@ -49,7 +49,7 @@ public class Vista2Control {
     public void setVista2(Vista2 vista2) {
         this.vista2 = vista2;
     }
-
+    
     public void limpiarVista2() {
         vista2 = new Vista2();
     }

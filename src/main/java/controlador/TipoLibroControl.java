@@ -22,16 +22,16 @@ import modelo.entidad.TipoLibro;
 @ViewScoped
 public class TipoLibroControl {
 
-    /**
-     * Creates a new instance of TipoLibroControl
-     */
+    //Variables
     private List<TipoLibro> listaTipoLibros;
     private TipoLibro tipolibro;
 
+    //Constructor
     public TipoLibroControl() {
         tipolibro = new TipoLibro();
     }
 
+    //Crea una lista con la clase TipoLibroDao
     public List<TipoLibro> getListaTipoLibros() {
         TipoLibroDao ad = new TipoLibroDao();
         listaTipoLibros = ad.listarTipoLibro();
@@ -50,21 +50,25 @@ public class TipoLibroControl {
         this.tipolibro = tipolibro;
     }
 
+    //Limpiar TipoLibro
     public void limpiarTipoLibro() {
         tipolibro = new TipoLibro();
     }
 
+    //Agregar TipoLibro
     public void agregarTipoLibro() {
         TipoLibroDao ad = new TipoLibroDao();
         ad.agregar(tipolibro);      
     }
 
+    ///Modificar TipoLibro
     public void modificarTipoLibro() {
         TipoLibroDao ad = new TipoLibroDao();
         ad.modificar(tipolibro);
         limpiarTipoLibro();
     }
 
+    //Eliminar TipoLibro
     public void eliminarTipoLibro() {
         TipoLibroDao ad = new TipoLibroDao();
         ad.eliminar(tipolibro);

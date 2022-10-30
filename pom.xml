@@ -15,82 +15,93 @@
     </properties>
     
         <dependencies>
-                  <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.17</version>
-        </dependency>
-      
-        <dependency>
-            <groupId>org.primefaces</groupId>
-            <artifactId>primefaces</artifactId>
-            <version>11.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>4.3.1.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.javax.persistence</groupId>
-            <artifactId>hibernate-jpa-2.1-api</artifactId>
-            <version>1.0.0.Final</version>
-        </dependency>
-                <dependency>
-                        <groupId>org.glassfish</groupId>
-                        <artifactId>javax.faces</artifactId>
-                        <version>2.3.9</version>
-                </dependency>
-                <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-web-api</artifactId>
-            <version>7.0</version>
-            <scope>provided</scope>
-        </dependency>
-                        
-          <dependency>
-            <groupId>org.glassfish.jersey.containers</groupId>
-            <artifactId>jersey-container-servlet</artifactId>
-            <version>2.29.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.inject</groupId>
-            <artifactId>jersey-hk2</artifactId>
-            <version>2.29.1</version>
-        </dependency>
-        <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>jstl</artifactId>
-      <version>1.2</version>
-</dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>com.sun.faces</groupId>
-            <artifactId>jsf-api</artifactId>
-            <version>2.2.17</version>
-        </dependency>
-	<dependency>
-            <groupId>com.sun.faces</groupId>
-            <artifactId>jsf-impl</artifactId>
-            <version>2.2.17</version>
-        </dependency>
-          
-        <dependency>
-    <groupId>com.googlecode.json-simple</groupId>
-    <artifactId>json-simple</artifactId>
-    <version>1.1.1</version>
-</dependency>
-  <dependency>
-    <groupId>javax.enterprise</groupId>
-    <artifactId>cdi-api</artifactId>
-    <version>1.2</version>
-</dependency>
-    </dependencies>
+            <!-- Dependencia a conexion de base de datos mysql -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.17</version>
+            </dependency>
+            <!-- Dependencoa de Primefaces-->
+            <dependency>
+                <groupId>org.primefaces</groupId>
+                <artifactId>primefaces</artifactId>
+                <version>11.0.0</version>
+            </dependency>
+            <!-- Dependencias Hibernate-->
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-entitymanager</artifactId>
+                <version>4.3.1.Final</version>
+            </dependency>
+            <!-- Dependencia Hibernate persistencia-->
+            <dependency>
+                <groupId>org.hibernate.javax.persistence</groupId>
+                <artifactId>hibernate-jpa-2.1-api</artifactId>
+                <version>1.0.0.Final</version>
+            </dependency>
+            <!-- Dependencia Glassfish-->
+            <dependency>
+                <groupId>org.glassfish</groupId>
+                <artifactId>javax.faces</artifactId>
+                <version>2.3.9</version>
+            </dependency>
+            <!-- Dependencia de javax-->
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-web-api</artifactId>
+                <version>7.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <!-- Dependencias de Glassfish-->            
+            <dependency>
+                <groupId>org.glassfish.jersey.containers</groupId>
+                <artifactId>jersey-container-servlet</artifactId>
+                <version>2.29.1</version>
+            </dependency>
+            <!-- Dependencias de Glassfish -->
+            <dependency>
+                <groupId>org.glassfish.jersey.inject</groupId>
+                <artifactId>jersey-hk2</artifactId>
+                <version>2.29.1</version>
+            </dependency>
+            <!-- Dependencia de javax-->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>1.2</version>
+            </dependency>
+            <!-- Dependencia de javax-->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>3.1.0</version>
+            </dependency>
+            <!-- Dependencia de com.sun.faces-->
+            <dependency>
+                <groupId>com.sun.faces</groupId>
+                <artifactId>jsf-api</artifactId>
+                <version>2.2.17</version>
+            </dependency>
+            <!-- Dependencia de com.sun.faces-->
+            <dependency>
+                <groupId>com.sun.faces</groupId>
+                <artifactId>jsf-impl</artifactId>
+                <version>2.2.17</version>
+            </dependency>
+            <!-- Dependencia de com.googlecode.json-simple-->
+            <dependency>
+                <groupId>com.googlecode.json-simple</groupId>
+                <artifactId>json-simple</artifactId>
+                <version>1.1.1</version>
+            </dependency>
+            <!-- Dependencia de javax-->
+            <dependency>
+                <groupId>javax.enterprise</groupId>
+                <artifactId>cdi-api</artifactId>
+                <version>1.2</version>
+            </dependency>
+            
+        </dependencies>
 
     <build>
         <plugins>
